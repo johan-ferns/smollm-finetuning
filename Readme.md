@@ -21,7 +21,9 @@
   - __finetune_sft_peft__ notebook describes the steps to setup LoraConfig and SFTConfig to fine-tune adapters.
     - Original model weights are kept frozen at the time of fine-tuning. Only adapter weights are updated.
     - The adapaters weights are small. Can be added back to the original model weights or kept separate.
-
+- Prompt Tuning :
+  - Soft prompts are generated from the frozen model weights. These prompts are vectors and not actual text although they start as actual text (example the original prompt or question that the model could not respond to).
+  - Effective if you have a big model with > 10B parameters. Does not seem to be effective for small models.
 
 ## Chapter 4 : 
 - Evaluations
