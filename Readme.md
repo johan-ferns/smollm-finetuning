@@ -13,3 +13,15 @@
     - Odds Ratio Performance Optimization (ORPO) :
         - Combines SFT and preference alignment together in a single training pipeline.
         - Start trainig the model from scractch to have a task specific converstation.
+
+## Chapter 3:
+- Parameter Efficient Fine-tuning : 
+  Adapaters are low rank (certain number of rows and columns per matrix) that can be fine-tune and added to LLM 
+  weights to align the LLM output to a specific case. 
+  - __finetune_sft_peft__ notebook describes the steps to setup LoraConfig and SFTConfig to fine-tune adapters.
+    - Original model weights are kept frozen at the time of fine-tuning. Only adapter weights are updated.
+    - The adapaters weights are small. Can be added back to the original model weights or kept separate.
+
+
+## Chapter 4 : 
+- Evaluations
