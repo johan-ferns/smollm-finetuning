@@ -6,7 +6,7 @@
 ## Chapter 2:
 - Preference Alignment with 2 techniques:
     - Direct Preference Optimization (DPO): 
-        - Requires the models first be SFT and then aligned based on converstation records.
+        - Requires the models first be trained with SFT and then aligned based on converstation records.
           Each record has to have a chosen and a rejected converstation to help the model understand
           what type of converstation it should move forward with.
         - Builds on the converstational knowledge the model has gained from SFT.
@@ -25,5 +25,7 @@
   - Soft prompts are generated from the frozen model weights. These prompts are vectors and not actual text although they start as actual text (example the original prompt or question that the model could not respond to).
   - Effective if you have a big model with > 10B parameters. Does not seem to be effective for small models.
 
-## Chapter 4 : 
-- Evaluations
+## Chapter 4 : Using LightEval HF library to setup pipleine for eval
+- Add evaluations to the pipeline
+- Design your custom eval tasks and metrics.
+- Note : library has some issue with Torch and HF versions. Use with caution.
